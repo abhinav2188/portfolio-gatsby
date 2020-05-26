@@ -43,7 +43,7 @@ const Layout = props => {
         </header>
         <main className="flex-grow mx-auto w-full">{props.children}</main>
         <footer>
-        <svg className="w-full lg:h-24" viewBox="0 0 360 97" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <svg className="w-full lg:h-16" viewBox="0 0 360 97" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M360 97L1.52588e-05 97L6.77878e-06 3.14722e-05L360 97Z" fill="black"/>
         <path d="M360 97L1.52588e-05 97L6.77878e-06 3.14722e-05L360 97Z" fill="black"/>
         <path d="M0 0L360 6.29444e-05L360 97.0001L0 0Z" fill="#8C8C8C"/>
