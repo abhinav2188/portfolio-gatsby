@@ -1,24 +1,26 @@
 @tailwind base;
 
 h1{
-    @apply text-3xl;
-}
-h2{
     @apply text-2xl;
 }
-h3{
+h2{
     @apply text-xl;
 }
-h4{
+h3{
     @apply text-lg;
 }
-p{
-    @apply text-sm;
+h4{
+    @apply text-base;
 }
-h6{
+p{
     @apply text-xs;
 }
-
+h6{
+    @apply text-2xs;
+}
+button:focus,input:focus,a:focus{
+    @apply outline-none;
+}
 .icon1{
     @apply w-16;
 }
@@ -28,8 +30,37 @@ h6{
 .icon3{
     @apply w-6;
 }
-
-@screen md {
+@screen md{
+    h1{
+        @apply text-3xl;
+    }
+    h2{
+        @apply text-2xl;
+    }
+    h3{
+        @apply text-xl;
+    }
+    h4{
+        @apply text-lg;
+    }
+    p{
+        @apply text-sm;
+    }
+    h6{
+        @apply text-xs;
+    }
+    .icon1{
+        @apply w-24;
+    }
+    .icon2{
+        @apply w-12;
+    }
+    .icon3{
+        @apply w-8;
+    }
+    
+}
+@screen xl {
     h1{
         @apply text-4xl;
     }
@@ -48,17 +79,9 @@ h6{
     p{
         @apply text-base;
     }
-    .icon1{
-        @apply w-24;
-    }
-    .icon2{
-        @apply w-12;
-    }
-    .icon3{
-        @apply w-8;
-    }
-    
 }
+
+
 
 
 @tailwind components;
