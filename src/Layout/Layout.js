@@ -41,7 +41,7 @@ const Layout = props => {
             <path id="tpath1" d="M0 0H360V45L0 0Z" fill="black" />
           </svg>
         </header>
-        <main className="flex-grow bg-gray-x mx-auto">{props.children}</main>
+        <main className="flex-grow mx-auto w-full">{props.children}</main>
         <footer>
         <svg className="w-full lg:h-24" viewBox="0 0 360 97" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M360 97L1.52588e-05 97L6.77878e-06 3.14722e-05L360 97Z" fill="black"/>
