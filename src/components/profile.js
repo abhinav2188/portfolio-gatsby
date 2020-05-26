@@ -7,11 +7,11 @@ import home from "../assets/svg-icons/sun.svg"
 const Profile = props => {
   return (
     <div className="w-full">
-      <div className="profile flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-8">
         <img
           src={pic}
           alt="abhinav rastogi"
-          className="md:h-64 md:w-64 w-48 h-48 object-cover object-top rounded-full my-2"
+          className="lg:h-64 lg:w-64 md:w-48 md:h-48 w-40 h-40 object-cover object-top rounded-full my-2"
         />
         <p className="text-center text-blue-x font-black">
           Developer | Designer | Freelancer

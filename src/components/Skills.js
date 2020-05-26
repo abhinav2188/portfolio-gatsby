@@ -10,7 +10,7 @@ const Skill = props => {
     <div class="flex flex-col w-3/4 my-12 mx-auto md:px-8">
       <div class="flex md:flex-col md:items-center items-start justify-between">
         <div class="md:border-0 border border-blue-600 border p-4 rounded-lg mr-4">
-          <img class="lg:h-12 md:h-8 h-6" src={props.icon} />
+          <img class="lg:h-12 md:h-8 h-6" src={props.icon} alt="" />
         </div>
         <div class="flex flex-col md:items-center">
           <h3 class=" md:mb-4 font-bold">{props.title}</h3>
@@ -26,7 +26,7 @@ const Skills = () => {
       <div className="bg-blue-x text-white w-full">
         <Container>
           <div class="flex items-center my-8">
-            <img class="mx-2 lg:h-16 md:h-12 h-10" src={skillsSvg} />
+            <img class="mx-2 lg:h-16 md:h-12 h-10" src={skillsSvg} alt="" />
             <h2 class="mx-2 font-black">My Skills</h2>
           </div>
           <div class="flex md:flex-row flex-col justify-around w-full">
