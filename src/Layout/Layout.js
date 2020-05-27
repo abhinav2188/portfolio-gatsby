@@ -12,7 +12,7 @@ const Layout = props => {
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow mx-auto w-full">{props.children}</main>
-        <Footer />
+        <Footer setSvgWhite={props.setSvgWhite}/>
       </div>
     </>
   )

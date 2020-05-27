@@ -15,7 +15,7 @@ const ImgLink = props => (
   </a>
 )
 
-export default function Home() {
+export default function Footer(props) {
   return (
     <>
       <svg
@@ -33,8 +33,8 @@ export default function Home() {
           d="M360 97L1.52588e-05 97L6.77878e-06 3.14722e-05L360 97Z"
           fill="black"
         />
-        <path d="M0 0L360 6.29444e-05L360 97.0001L0 0Z" fill="#8C8C8C" />
-        <path d="M0 0L360 6.29444e-05L360 97.0001L0 0Z" fill="#8C8C8C" />
+        <path d="M0 0L360 6.29444e-05L360 97.0001L0 0Z" fill={`${props.setSvgWhite?"white":"#8C8C8C"}`} />
+        <path d="M0 0L360 6.29444e-05L360 97.0001L0 0Z" fill={`${props.setSvgWhite?"white":"#8C8C8C"}`} />
       </svg>
 
       <div className="w-full bg-black py-4 text-white">
