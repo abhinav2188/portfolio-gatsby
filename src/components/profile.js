@@ -18,6 +18,13 @@ const Profile = props => {
           }
         }
       },
+      tabletImage:file(relativePath: {eq: "img1.jpg"}) {
+        childImageSharp {
+          fixed(fit:COVER, height:200, width: 200, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       mobileImage:file(relativePath: {eq: "img1.jpg"}) {
         childImageSharp {
           fixed(fit:COVER, height: 150, width: 150, quality: 100) {
@@ -32,8 +39,12 @@ const Profile = props => {
   const sources = [
     data.mobileImage.childImageSharp.fixed,
     {
+      ...data.tabletImage.childImageSharp.fixed,
+      media: `(min-width:768px && max-width:1023px)`
+    },
+    {
       ...data.desktopImage.childImageSharp.fixed,
-      media: `(min-width:768px)`
+      media: `(min-width:1024px)`
     }
   ]
 

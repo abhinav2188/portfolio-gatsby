@@ -7,12 +7,12 @@ import Container from "./Container";
 
 const Skill = props => {
   return (
-    <div className="flex flex-col w-3/4 my-6 mx-auto md:px-8">
+    <div className="flex flex-col w-3/4 my-6 mx-auto lg:px-8 md:px-4">
       <div className="flex md:flex-col md:items-center items-start justify-between">
-        <div className={`md:border-0 border border-blue-600 border p-4 rounded-lg ${props.toRight?"lg:order-1 order-2 lg:ml-4":"mr-4"}`}>
+        <div className={`md:border-0 border border-blue-600 border p-4 rounded-lg ${props.toRight?"md:order-1 order-2 md:ml-0 ml-4":"md:mr-0 mr-4"}`}>
           <img className="lg:h-12 md:h-8 h-6" src={props.icon} alt="" />
         </div>
-        <div className={`flex flex-col md:items-center ${props.toRight?"lg:order-2 order-1":""}`}>
+        <div className={`flex flex-col md:items-center ${props.toRight?"md:order-2 order-1":""}`}>
           <h3 className=" md:mb-4 font-bold">{props.title}</h3>
           {props.children}
         </div>
