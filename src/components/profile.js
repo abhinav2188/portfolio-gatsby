@@ -1,20 +1,48 @@
 import React from "react"
-import pic from "../assets/img1.jpg"
+import {graphql, useStaticQuery} from "gatsby"
+// import pic from "../assets/images/img1.jpg"
 import buid from "../assets/svg-bgs/section2.svg"
 import work from "../assets/svg-icons/company.svg"
 import home from "../assets/svg-icons/sun.svg"
+import Img from "gatsby-image"
 
 const Profile = props => {
+
+  const data = useStaticQuery(
+    graphql`
+    query  {
+      desktopImage: file(relativePath: {eq: "img1.jpg"}) {
+        childImageSharp {
+          fixed(fit:COVER, height: 250, width: 250, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      },
+      mobileImage:file(relativePath: {eq: "img1.jpg"}) {
+        childImageSharp {
+          fixed(fit:COVER, height: 150, width: 150, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `
+  )
+
+  const sources = [
+    data.mobileImage.childImageSharp.fixed,
+    {
+      ...data.desktopImage.childImageSharp.fixed,
+      media: `(min-width:768px)`
+    }
+  ]
+
   return (
     <div className="w-full">
       <div className="flex flex-col items-center mt-8">
-        <img
-          src={pic}
-          alt="abhinav rastogi"
-          className="lg:h-64 lg:w-64 md:w-48 md:h-48 w-40 h-40 object-cover object-top rounded-full my-2"
-        />
+        <Img fixed={sources} className="rounded-full shadow mb-2"/>
         <p className="text-center text-blue-x font-black">
-          Developer | Designer | Freelancer
+          FullStack Developer | Designer | Freelancer
           <br />
         </p>
         <p className="flex items-center text-center text-black font-black">
@@ -49,4 +77,5 @@ const Profile = props => {
   )
 }
 
-export default Profile
+export default Profile;
+

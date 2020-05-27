@@ -8,7 +8,7 @@ import mylogo from "../my logo.svg"
 const ImgLink = props => (
   <a href={props.link} className="mx-2">
     <img
-      className="md:h-5 h-4 transform hover:scale-125 transition-all duration-100 "
+      className="md:h-5 h-4 transform hover:scale-125 transition-all duration-100"
       src={props.imgSrc}
       alt=""
     />
@@ -54,7 +54,7 @@ export default function Home() {
               imgSrc={insta}
             />
           </div>
-          <img className="md:h-8 h-6 my-2 self-center" src={mylogo} alt=""/>
+          <img className="md:h-8 h-6 my-2 self-center" src={mylogo} alt="" />
           <div className="flex flex-col items-end font-bold">
             <p>+919808727553</p>
             <a href="mailto:abhinav.26aug@gmail.com">

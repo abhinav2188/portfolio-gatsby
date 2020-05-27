@@ -7,14 +7,14 @@ import ed3 from "../assets/svg-icons/book.svg"
 
 const Ed = props => {
   return (
-    <div class="flex flex-col w-3/4 mb-8 mx-auto ">
-      <div class="flex items-start ">
-        <div class="border p-2 rounded-lg mr-4">
-          <img class="lg:h-8 md:h-6 h-4" src={props.icon} alt="" />
+    <div className="flex flex-col w-3/4 my-6 mx-auto ">
+      <div className="flex items-start ">
+        <div className="border p-2 rounded-lg mr-4">
+          <img className="lg:h-8 md:h-6 h-4" src={props.icon} alt="" />
         </div>
-        <div class="flex flex-col">
+        <div className="flex flex-col">
           <h4 className="font-bold text-blue-x ">{props.title}</h4>
-          <p class="">{props.content}</p>
+          <p className="">{props.content}</p>
         </div>
       </div>
     </div>
@@ -25,11 +25,11 @@ const education = () => {
   return (
     <div>
       <Container>
-        <div class="flex items-center my-8">
-          <img class="mx-2 lg:h-16 md:h-12 h-10" src={edSvg} alt="" />
-          <h2 class="mx-2 font-black">My Education</h2>
+        <div className="flex items-center my-8">
+          <img className="mx-2 lg:h-16 md:h-12 h-10" src={edSvg} alt="" />
+          <h2 className="mx-2 font-black">My Education</h2>
         </div>
-        <div className="my-12 flex flex-col w-full">
+        <div className="my-8 flex flex-col w-full">
           <Ed
             icon={ed1}
             title="Masters in Computer Applications (MCA)"
