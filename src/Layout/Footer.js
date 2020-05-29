@@ -56,9 +56,9 @@ export default function Footer(props) {
           </div>
           <img className="md:h-8 h-6 my-2 self-center" src={mylogo} alt="" />
           <div className="flex flex-col items-end font-bold">
-            <p>+919808727553</p>
+            <h6>+919808727553</h6>
             <a href="mailto:abhinav.26aug@gmail.com">
-              <p>abhinav.26aug@gmail.com</p>
+              <h6>abhinav.26aug@gmail.com</h6>
             </a>
           </div>
         </div>

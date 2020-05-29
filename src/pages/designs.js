@@ -69,12 +69,14 @@ export default function Designs(props) {
         />
       </Modal>
       <ImagesContainer
+        id="posterDesigns"
         title="poster designs"
         images={props.data.posterImages.edges}
         setActiveId={setActiveId}
         setShowModal={setShowModal}
       />
       <ImagesContainer
+        id="iconDesigns"
         title="icon designs"
         images={props.data.iconImages.edges}
         setActiveId={setActiveId}

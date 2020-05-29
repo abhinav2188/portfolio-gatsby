@@ -54,14 +54,13 @@ const Profile = props => {
         <Img fixed={sources} className="rounded-full shadow mb-2"/>
         <p className="text-center text-blue-x font-black">
           FullStack Developer | Designer | Freelancer
-          <br />
         </p>
-        <p className="flex items-center text-center text-black font-black">
+        <div className="flex items-baseline text-center text-black font-bold mt-2">
           <img className="h-4 inline-block mx-1" src={work} alt="" />
-          New Delhi
-          <img className="h-4 inline-block mx-1 ml-4" src={home} alt="" />
-          Bareilly, UP
-        </p>
+          <h6 className="mr-2">New Delhi</h6>
+          <img className="h-4 inline-block mx-1 " src={home} alt="" />
+          <h6>Bareilly, UP</h6>
+        </div>
         <a
           href="mailto:abhinav.26aug@gmail.com"
           className="bg-blue-x px-4 py-2 rounded mt-12 mb-8 text-white transform hover:scale-110 transition-all duration-100"

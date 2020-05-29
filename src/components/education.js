@@ -8,13 +8,11 @@ import ed3 from "../assets/svg-icons/book.svg"
 const Ed = props => {
   return (
     <div className="flex flex-col w-3/4 my-6 mx-auto ">
-      <div className="flex items-start ">
-        <div className="border p-2 rounded-lg mr-4">
-          <img className="lg:h-8 md:h-6 h-4" src={props.icon} alt="" />
-        </div>
+      <div className="flex items-start">
+          <img className="md:h-10 md:w-10 h-8 w-8 p-2 border rounded-lg mr-4" src={props.icon} alt="" />
         <div className="flex flex-col">
-          <h4 className="font-bold text-blue-x ">{props.title}</h4>
-          <p className="">{props.content}</p>
+          <h4 className="font-bold text-blue-x inline-block">{props.title}</h4>
+          <p className="inline-block">{props.content}</p>
         </div>
       </div>
     </div>
