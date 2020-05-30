@@ -29,13 +29,20 @@ module.exports = {
         path: `${__dirname}/src/assets/icons/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: `gatsby-transformer-remark`,
       options: {
-        offset: -100,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+            },
+          },
+        ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }

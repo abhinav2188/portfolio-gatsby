@@ -30,7 +30,7 @@ const Carousel = props => {
           addEndListener={(node, done) => {
             node.addEventListener("transitionend", done, false)
           }}
-          classNames={transitionType}
+          classNames={props.fade?"fade":transitionType}
         >
           {props.elements[props.elementIds[activeIndex]]}
         </CSSTransition>
@@ -38,7 +38,8 @@ const Carousel = props => {
       <div className="flex mt-4">
         <button
           className="p-2 bg-gray-x rounded-sm mx-1"
-          onClick={() => setTranstionClass("prev", previous)}
+          onClick={() => {
+            setTranstionClass("prev", previous);}}
         >
           <svg
             className="lg:w-4 w-2"

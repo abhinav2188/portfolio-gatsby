@@ -9,9 +9,7 @@ import Modal from "../components/UI/Modal"
 const ImagesContainer = props => {
   return (
     <div className="my-8">
-      <div className="flex flex-col w-full items-center mt-4">
-        <h1 className="text-blue-x font-black capitalize">{props.title}</h1>
-      </div>
+      <h1 className="text-blue-x font-black capitalize mt-4 text-center">{props.title}</h1>
       <Container className="flex items-center justify-center flex-wrap py-8">
         {props.images.map(({ node }) => {
           const sources = [

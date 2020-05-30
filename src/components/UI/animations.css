@@ -32,7 +32,7 @@
     transition: all 200ms;
  }
 
- .fade-enter{
+.fade-enter{
    opacity: 0;
 }
 .fade-enter-active , .fade-exit{
