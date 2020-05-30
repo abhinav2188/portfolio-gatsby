@@ -30,30 +30,45 @@ const fetchImageComponents = data => {
 }
 
 const development = ({ data }) => {
-  const d1 = {
-    title: "keeper",
-    description: "a simple notes webapp with authentication",
-    technologyStack: [
-      "html5",
-      "tailwindCSS",
-      "React js",
-      "Node js, Express",
-      "MongoDB",
-    ],
-    images: fetchImageComponents(data.notesApp),
-  }
+  const projectsData = [
+    {
+      title: "keeper",
+      description: "A simple notes webapp with authentication",
+      technologyStack: [
+        "html5",
+        "tailwindCSS",
+        "React js",
+        "Node js, Express",
+        "MongoDB",
+      ],
+      images: fetchImageComponents(data.notesApp),
+      githubLink: "https://github.com/abhinav2188/Keeper-Webapp",
+      deployLink: "https://keeperx1.herokuapp.com/"
+    },
+    {
+      title: "Simon game",
+      description: "A simple game to test memory and visualization",
+      technologyStack: ["html5", "tailwindCSS", "Vue js"],
+      images: fetchImageComponents(data.simonGame),
+      githubLink: "https://github.com/abhinav2188/simon-game",
+    },
+  ]
 
   return (
     <Layout setSvgWhite>
-        <h1 className="text-blue-x font-black capitalize mt-4 text-center">
-          My Projects
-        </h1>
+      <h1 className="text-blue-x font-black capitalize my-4 text-center">
+        My Projects
+      </h1>
+      {projectsData.map(projectData => (
         <Project
-          title={d1.title}
-          description={d1.description}
-          technologyStack={d1.technologyStack}
-          images={d1.images}
+          title={projectData.title}
+          description={projectData.description}
+          technologyStack={projectData.technologyStack}
+          images={projectData.images}
+          githubLink={projectData.githubLink}
+          deployLink={projectData.deployLink}
         />
+      ))}
     </Layout>
   )
 }

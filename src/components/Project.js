@@ -5,7 +5,7 @@ import Carousel from "./UI/Carousel"
 
 const Project = props => {
   return (
-      <Container className="py-16">
+      <Container className="md:py-12 py-8">
     <div className="py-8 flex flex-col rounded-lg border shadow-lg px-4 items-center w-full">
       <h2 className="font-bold self-center font-black capitalize">{props.title}</h2>
       <p className="self-center mb-8 font-bold ">{props.description}</p>
@@ -26,6 +26,14 @@ const Project = props => {
               {tech}
             </h6>
           ))}
+          <hr className="md:my-4 my-2"/>
+          <div className="flex">
+          <a href={props.githubLink} className="mr-2 p-1 bg-gray-900 text-white rounded"><h6>View code</h6></a>
+          {
+            props.deployLink?
+            <a href={props.githubLink} className="p-1"><h6>View deployed site</h6></a>:""
+          }
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +46,8 @@ Project.propTypes = {
   description: PropTypes.string,
   technologyStack: PropTypes.array,
   images: PropTypes.array,
+  githubLink:PropTypes.string,
+  deployLink : PropTypes.string
 }
 
 export default Project
