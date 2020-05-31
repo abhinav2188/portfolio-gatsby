@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../Layout/Layout"
-import Container from "../components/Container"
 import Project from "../components/Project"
 import Img from "gatsby-image"
 
@@ -43,7 +42,7 @@ const development = ({ data }) => {
       ],
       images: fetchImageComponents(data.notesApp),
       githubLink: "https://github.com/abhinav2188/Keeper-Webapp",
-      deployLink: "https://keeperx1.herokuapp.com/"
+      deployLink: "https://keeperx1.herokuapp.com/",
     },
     {
       title: "Simon game",
@@ -51,6 +50,14 @@ const development = ({ data }) => {
       technologyStack: ["html5", "tailwindCSS", "Vue js"],
       images: fetchImageComponents(data.simonGame),
       githubLink: "https://github.com/abhinav2188/simon-game",
+    },
+    {
+      title: "Todo list",
+      description: "A simple todo list webapp",
+      technologyStack: ["html5", "Vanilla CSS", "Node js", "ejs view engine"],
+      images: fetchImageComponents(data.todo),
+      githubLink: "https://github.com/abhinav2188/todo",
+      deployLink: "https://immense-plains-58178.herokuapp.com/",
     },
   ]
 
@@ -99,11 +106,34 @@ export const query = graphql`
           }
         }
       }
-    }
+    },
     simonGame: allFile(
       filter: {
         sourceInstanceName: { eq: "images" }
         relativePath: { regex: "/projectScreens/simon/" }
+      }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            desktop: fixed(width: 700, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+            tablet: fixed(width: 600, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+            mobile: fixed(width: 320, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    todo: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativePath: { regex: "/projectScreens/todo-list/" }
       }
     ) {
       edges {
