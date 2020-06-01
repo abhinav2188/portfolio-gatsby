@@ -25,10 +25,10 @@ const Modal = props => {
       unmountOnExit
     >
       <div
-        className="flex flex-col fixed w-screen h-screen z-40 top-0 "
+        className="flex flex-col fixed w-screen h-screen z-40 top-0"
         style={{ backgroundColor: "rgba(0,0,0,0.9)" }}
       >
-        <button onClick={props.close} className="self-end p-2 bg-black">
+        <button onClick={props.close} className="self-end p-2 bg-black md:m-4 m-2">
           {closeSvg}
         </button>
         <div className="top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-50">
