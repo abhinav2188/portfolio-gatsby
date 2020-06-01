@@ -53,8 +53,8 @@ const development = ({ data }) => {
       githubLink: "https://github.com/abhinav2188/simon-game",
     },
     {
-      title: "Todo list",
-      description: "A simple todo list webapp",
+      title: "To-do list",
+      description: "A simple to-do list webapp",
       technologyStack: ["html5", "Vanilla CSS", "Node js", "ejs view engine"],
       images: fetchImageComponents(data.todo),
       githubLink: "https://github.com/abhinav2188/todo",

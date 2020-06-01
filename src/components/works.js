@@ -66,7 +66,7 @@ const Works = props => {
       <Container className="flex flex-col items-center lg:py-16 py-12">
         <div className="flex items-center my-8">
           <img className="mx-2 lg:h-16 md:h-12 h-10" src={workSvg} alt="" />
-          <h2 className="mx-2 font-black">My Works</h2>
+          <h2 className="mx-2 font-black">My Work</h2>
         </div>
         <div className="flex font-black my-8">
           <Link to="/designs/" className="bg-white relative rounded-lg shadow-sm hover:shadow-lg lg:mx-4 mx-2"> 
