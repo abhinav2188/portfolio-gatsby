@@ -1,5 +1,5 @@
 import React from "react"
-import Container from "./Container"
+import Container from "./container"
 import edSvg from "../assets/svg-icons/owl.svg"
 import ed1 from "../assets/svg-icons/insurance.svg"
 import ed2 from "../assets/svg-icons/mortarboard.svg"

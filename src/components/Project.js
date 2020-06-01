@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Container from "./Container"
-import Carousel from "./UI/Carousel"
+import Container from "./container"
+import Carousel from "./UI/carousel"
 
 const Project = props => {
   return (

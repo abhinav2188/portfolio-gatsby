@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../Layout/Layout"
+import Layout from "../Layout/layout"
 import "../css/tailwind.css"
-import Profile from "../components/Profile";
-import Skills from "../components/Skills";
-import Education from "../components/Education";
-import Works from "../components/Works";
+import Profile from "../components/profile";
+import Skills from "../components/skills";
+import Education from "../components/education";
+import Works from "../components/works";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import Img from "gatsby-image"
-import Layout from "../Layout/Layout"
-import Container from "../components/Container"
+import Layout from "../Layout/layout"
+import Container from "../components/container"
 import {graphql} from "gatsby"
 
 const Resume = props => {

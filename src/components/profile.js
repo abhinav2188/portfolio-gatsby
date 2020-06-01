@@ -1,6 +1,5 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
-// import pic from "../assets/images/img1.jpg"
 import buid from "../assets/svg-bgs/section2.svg"
 import work from "../assets/svg-icons/company.svg"
 import home from "../assets/svg-icons/sun.svg"

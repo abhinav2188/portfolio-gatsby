@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../Layout/Layout"
-import Project from "../components/Project"
+import Layout from "../Layout/layout"
+import Project from "../components/project"
 import Img from "gatsby-image"
 import {graphql} from "gatsby"
 

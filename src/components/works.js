@@ -1,5 +1,5 @@
 import React from "react"
-import Container from "./Container"
+import Container from "./container"
 import workSvg from "../assets/svg-icons/work.svg"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"

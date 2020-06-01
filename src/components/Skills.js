@@ -3,7 +3,7 @@ import skillsSvg from "../assets/svg-icons/skills.svg"
 import gdSvg from "../assets/svg-icons/design.svg"
 import programmingSvg from "../assets/svg-icons/data.svg"
 import webSvg from "../assets/svg-icons/cms.svg"
-import Container from "./Container";
+import Container from "./container";
 
 const Skill = props => {
   return (

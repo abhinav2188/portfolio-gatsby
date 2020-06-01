@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import Layout from "../Layout/Layout"
+import Layout from "../Layout/layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Container from "../components/Container"
-import Carousel from "../components/UI/Carousel"
-import Modal from "../components/UI/Modal"
+import Container from "../components/container"
+import Carousel from "../components/UI/carousel"
+import Modal from "../components/UI/modal"
 
 const ImagesContainer = props => {
   return (
