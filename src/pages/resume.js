@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 import Img from "gatsby-image"
-import Layout from "../Layout/layout"
+import Layout from "../HOC/layout"
 import Container from "../components/container"
 import {graphql} from "gatsby"
 

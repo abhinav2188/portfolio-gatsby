@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../Layout/layout"
+import Layout from "../HOC/layout"
 import "../css/tailwind.css"
 import Profile from "../components/profile";
 import Skills from "../components/skills";
