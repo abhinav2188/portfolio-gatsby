@@ -2,6 +2,7 @@ import React,{useState} from "react"
 import Img from "gatsby-image"
 import Layout from "../Layout/Layout"
 import Container from "../components/Container"
+import {graphql} from "gatsby"
 
 const Resume = props => {
     const [d,setD] = useState("Download PDF"); 

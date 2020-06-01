@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../Layout/Layout"
 import Project from "../components/Project"
 import Img from "gatsby-image"
+import {graphql} from "gatsby"
 
 const fetchImageComponents = data => {
   const imgs = []
