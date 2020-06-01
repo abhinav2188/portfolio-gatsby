@@ -22,7 +22,7 @@ const Resume = props => {
 
       </div>
         <div className="flex flex-col items-center w-full">
-          {props.data.resumeImages.edges.reverse().map(({ node }) => {
+          {props.data.resumeImages.edges.map(({ node }) => {
             const sources = [
               node.childImageSharp.mobile,
               {
@@ -55,9 +55,10 @@ export const query = graphql`
   query {
     resumeImages: allFile(
       filter: {
-        sourceInstanceName: { eq: "images" }
-        relativePath: { regex: "/abhinav_resume/" }
-      }
+        sourceInstanceName: { eq: "images" },
+        relativePath: { regex: "/abhinav_resume/" },
+      },
+      sort: {fields: birthTime, order: DESC}
     ) {
       edges {
         node {
