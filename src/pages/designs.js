@@ -9,11 +9,16 @@ import Modal from "../components/UI/modal"
 const ImagesContainer = props => {
   return (
     <div className="my-8">
-      <h1 className="text-blue-x font-black capitalize mt-4 text-center">{props.title}</h1>
+      <h1 className="text-blue-x font-black capitalize mt-4 text-center">
+        {props.title}
+      </h1>
       <Container className="flex items-center justify-center flex-wrap py-8">
         {props.images.map(({ node }) => {
           const sources = [
-            node.childImageSharp.mobile,
+            {
+              ...node.childImageSharp.mobile,
+              media: `(max-width:767px)`,
+            },
             {
               ...node.childImageSharp.tablet,
               media: `(min-width:768px && max-width:1023px)`,
@@ -24,7 +29,12 @@ const ImagesContainer = props => {
             },
           ]
           return (
-            <button onClick={() => {props.setActiveId(node.id); props.setShowModal(true)}}>
+            <button
+              onClick={() => {
+                props.setActiveId(node.id)
+                props.setShowModal(true)
+              }}
+            >
               <Img
                 key={node.id}
                 fixed={sources}
@@ -43,7 +53,10 @@ export default function Designs(props) {
   const carouselElements = []
   props.data.allImages.edges.map(({ node }) => {
     const sources = [
-      node.childImageSharp.mobile,
+      {
+        ...node.childImageSharp.mobile,
+        media: `(max-width:767px)`,
+      },
       {
         ...node.childImageSharp.desktop,
         media: `(min-width:768px)`,
@@ -106,7 +119,7 @@ export const query = graphql`
     }
     iconImages: allFile(filter: { sourceInstanceName: { eq: "icons" } }) {
       edges {
-        node {  
+        node {
           id
           childImageSharp {
             desktop: fixed(fit: COVER, width: 250, quality: 100) {

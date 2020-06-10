@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "Abhinav-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Portfolio site made with Gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

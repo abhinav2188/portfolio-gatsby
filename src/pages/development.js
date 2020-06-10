@@ -7,7 +7,10 @@ import {graphql} from "gatsby"
 const fetchImageComponents = data => {
   const imgs = data.edges.map(({ node }) => {
     const sources = [
-      node.childImageSharp.mobile,
+      {
+        ...node.childImageSharp.mobile,
+        media: `(max-width:767px)`,
+      },
       {
         ...node.childImageSharp.tablet,
         media: `(min-width:768px && max-width:1023px)`,
@@ -21,11 +24,11 @@ const fetchImageComponents = data => {
       <Img
         fixed={sources}
         alt=""
-        className="lg:border-8 md:border-4 border-2 rounded-lg shadow border-gray-900"
+        className="lg:border-8 border-4 rounded-lg shadow border-gray-900"
       />
     )
-  })
-  return imgs
+  });
+  return imgs;
 }
 
 const development = ({ data }) => {
