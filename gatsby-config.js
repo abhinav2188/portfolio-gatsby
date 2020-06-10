@@ -6,9 +6,13 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Abhinav's Portfolio`,
+    description: `Portfolio site made with gatsby`,
+    author: `Abhinav Rastogi`,
+  },
   pathPrefix: "/portfolio-gatsby",
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -22,7 +26,9 @@ module.exports = {
         display: `standalone`,
         icon: `src/assets/logo.png`, // This path is relative to the root of the site.
       },
-    },{
+    },
+    `gatsby-plugin-react-helmet`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -43,20 +49,8 @@ module.exports = {
         path: `${__dirname}/src/assets/icons/`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 700,
-            },
-          },
-        ],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`
   ],
 }
