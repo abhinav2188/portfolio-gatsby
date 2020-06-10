@@ -5,8 +5,7 @@ import Img from "gatsby-image"
 import {graphql} from "gatsby"
 
 const fetchImageComponents = data => {
-  const imgs = []
-  data.edges.map(({ node }) => {
+  const imgs = data.edges.map(({ node }) => {
     const sources = [
       node.childImageSharp.mobile,
       {
@@ -18,7 +17,7 @@ const fetchImageComponents = data => {
         media: `(min-width:1024px)`,
       },
     ]
-    imgs.push(
+    return(
       <Img
         fixed={sources}
         alt=""

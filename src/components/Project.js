@@ -31,7 +31,7 @@ const Project = props => {
           <a href={props.githubLink} className="mr-2 p-1 bg-gray-900 text-white rounded"><h6>View code</h6></a>
           {
             props.deployLink?
-            <a href={props.githubLink} className="p-1"><h6>View deployed site</h6></a>:""
+            <a href={props.deployLink} className="p-1"><h6>View deployed site</h6></a>:""
           }
           </div>
         </div>

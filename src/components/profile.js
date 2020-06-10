@@ -36,10 +36,13 @@ const Profile = props => {
   )
 
   const sources = [
-    data.mobileImage.childImageSharp.fixed,
+    {
+      ...data.mobileImage.childImageSharp.fixed,
+      media: `(max-width:600px)`
+    },
     {
       ...data.tabletImage.childImageSharp.fixed,
-      media: `(min-width:768px && max-width:1023px)`
+      media: `(min-width:601px && max-width:1023px)`
     },
     {
       ...data.desktopImage.childImageSharp.fixed,
